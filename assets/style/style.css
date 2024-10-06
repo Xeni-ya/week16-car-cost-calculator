@@ -1,0 +1,25 @@
+/* 4. Добавьте стили к калькулятору, чтобы он выглядел привлекательно и был легко использовать */
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}

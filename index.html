@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <title>Калькулятор расчёта стоимости автомобиля в зависимости от комплектации</title>
+</head>
+<body>
+  <!-- 1. Создайте HTML-страницу с калькулятором для расчета стоимости автомобиля в зависимости от выбранных параметров. Калькулятор должен содержать следующие элементы:
+  Выпадающий список (select) с маркой автомобиля: Reno, Opel, Mazda, Jaguar
+  Выпадающий список (select) с моделью автомобиля, зависящей от выбранной марки
+  Чекбокс или радиокнопка для выбора типа топлива: бензин, дизель, газ, электричество
+  Поле ввода (input) для ввода объема двигателя (от 1.1 литра до 3.5 литров)
+  Чекбокс или радиокнопка для выбора состояния автомобиля: новый, подержанный
+  Если автомобиль подержанный, появляется чекбокс или радиокнопка для выбора количества владельцев: 1-2 владельца, более 3-х владельцев
+  Чекбокс или радиокнопка для выбора способа оплаты: картой, наличными, счет на юридическое лицо
+  Дополнительные поля по вашему желанию -->
+  <main>
+    <section>
+      <h1 class="title">Калькулятор расчёта стоимости автомобиля</h1>
+      <form action="./index.html" method="post" class="form">
+        <div>
+          <label for="brand">Марка:</label>
+          <select id="brand">
+            <option value="Reno">Reno</option>
+            <option value="Opel">Opel</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Jaguar">Jaguar</option>
+          </select>
+        </div>
+        <div>
+          <label for="model">Модель:</label>
+          <select id="model"></select>
+        </div>
+        <div>
+          <label for="fuel">Тип топлива:</label>
+          <select id="fuel">
+            <option value="бензин">Бензин</option>
+            <option value="дизель">Дизель</option>
+            <option value="газ">Газ</option>
+            <option value="электричество">Электричество</option>
+          </select>
+        </div>
+        <div>
+          <label for="engineVolume">Объем двигателя (л):</label>
+          <input type="number" id="engineVolume" min="1.1" max="3.5" step="0.1" value="1.1">
+        </div>
+        <div>
+          <label for="condition">Состояние:</label>
+          <select id="condition">
+            <option value="новый">Новый</option>
+            <option value="подержанный">Подержанный</option>
+          </select>
+        </div>
+        <div id="ownerDiv" style="display: none;">
+          <label for="owner">Количество владельцев:</label>
+          <select id="owner">
+            <option value="1-2">1-2 владельца</option>
+            <option value="3+">Более 3-х владельцев</option>
+          </select>
+        </div>
+        <div>
+          <label for="payment">Способ оплаты:</label>
+          <select id="payment">
+            <option value="картой">Картой</option>
+            <option value="наличными">Наличными</option>
+            <option value="счет">Счет на юридическое лицо</option>
+          </select>
+        </div>
+        <div id="result">Цена: </div>
+      </form>
+    </section>
+  </main>
+  <script src="./assets/script/script.js"></script>
+</body>
+</html>

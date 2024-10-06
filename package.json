@@ -1,0 +1,17 @@
+{
+  "name": "week16-car-cost-calculator",
+  "version": "1.0.0",
+  "description": "Работа cо * на шестнадцатой неделе обучения |  Калькулятор расчёта стоимости автомобиля в зависимости от комплектации",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0"
+  }
+}
