@@ -10,3 +10,41 @@
 // Обработка ошибок и отображение соответствующих сообщений при некорректном вводе данных
 // Анимация или изменение стиля элементов калькулятора при выборе определенных параметров
 // Возможность сброса значений и стоимости автомобиля к исходным значениям
+
+const brandSelect = document.getElementById('brand');
+const modelSelect = document.getElementById('model');
+const conditionSelect = document.getElementById('condition');
+const ownerSelect = document.getElementById('owner');
+const engineVolumeInput = document.getElementById('engineVolume');
+const fuelSelect = document.getElementById('fuel');
+const paymentSelect = document.getElementById('payment');
+const priceResult = document.getElementById('priceResult');
+const ownerDiv = document.getElementById('ownerDiv');
+
+function calculatePrice() {
+  const brand = brandSelect.value;
+  const model = modelSelect.value;
+  const fuel = fuelSelect.value;
+  const engineVolume = engineVolumeInput.value;
+  const condition = conditionSelect.value;
+  const owner = ownerSelect.value;
+  const payment = paymentSelect.value;
+
+  if (brand === 'Jaguar') {
+    price *= 2;
+  } else if (brand === 'Mazda') {
+    price *= 1.5;
+  }
+
+  if (model === 'F-Pace' || model === 'CX-5') {
+    price *= 1.2;
+  }
+  
+  if (condition === 'подержанный') {
+    price *= ownerPrices[owner];
+  }
+
+  if (payment === 'картой') {
+    price *= 1.05;
+  }
+}
