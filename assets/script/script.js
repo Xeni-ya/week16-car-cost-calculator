@@ -48,3 +48,6 @@ function calculatePrice() {
     price *= 1.05;
   }
 }
+brandSelect.addEventListener('change', () => {
+    calculatePrice();
+});
